@@ -1,0 +1,28 @@
+﻿
+@media only screen and (max-width : 992px){
+    header, main, footer{
+        padding-left: 0;
+    }
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+table{
+    align-content: center;
+}
+
+#mainlogo{
+    border-radius: 50px
+}
+
+a {
+    border-radius: 25px;
+}

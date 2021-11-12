@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EntityFrameWorkIntro</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <environment names="Development">
+        <link type="text/css" rel="stylesheet" href="~/lib/materialize/css/materialize.min.css" media="screen,projection" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    </environment>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            @*<a href="#" class="brand-logo" >Logo</a>*@
+            <a class="navbar-brand" href="#">
+                <img id="mainlogo" class="responsive-img" src="https://thumbs.dreamstime.com/z/dise%C3%B1o-del-logotipo-de-la-letra-ms-m-s-con-un-corte-creativo-170972482.jpg" alt="..." height ="65" width="90" >
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="material-icons">home</i>
+                        @*Home*@
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" asp-area="" asp-controller="Clients" asp-action="Index">
+                        <i class="material-icons">groups</i>
+                    @*Clients*@
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" asp-area="" asp-controller="Orders" asp-action="Index">
+                        <i class="material-icons">format_list_bulleted</i>
+                        @*Orders*@
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" asp-area="" asp-controller="Products" asp-action="Index">
+                        <i class="material-icons">inventory_2</i>
+                        @*Products*@
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/materialize/js/materialize.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

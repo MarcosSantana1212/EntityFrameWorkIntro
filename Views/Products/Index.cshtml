@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EntityFrameWorkIntro.Models.Products>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="centered btn light-blue">Create New</a>
+</p>
+<table class="table centered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr class="centered">
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                <a class="btn blue" style="border-radius: 3rem" asp-action="Edit" asp-route-id="@item.product_id">Edit</a> 
+                <a class="btn green" style="border-radius: 3rem" asp-action="Details" asp-route-id="@item.product_id">Details</a> 
+                <a class="btn red" style="border-radius: 3rem" asp-action="Delete" asp-route-id="@item.product_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
